@@ -1,27 +1,25 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
-
 :root {
-  --background: #0f172a; /* slate-900 - main background */
-  --foreground: #f8fafc; /* slate-50 - main text */
-  --card: #1e293b; /* slate-800 - card backgrounds */
-  --card-foreground: #f8fafc; /* slate-50 - card text */
-  --popover: #1e293b; /* slate-800 - popover backgrounds */
-  --popover-foreground: #f8fafc; /* slate-50 - popover text */
+  --background: #ffffff; /* white - main background */
+  --foreground: #0f172a; /* slate-900 - main text */
+  --card: #f8fafc; /* slate-50 - card backgrounds */
+  --card-foreground: #0f172a; /* slate-900 - card text */
+  --popover: #ffffff; /* white - popover backgrounds */
+  --popover-foreground: #0f172a; /* slate-900 - popover text */
   --primary: #6366f1; /* indigo-500 - buttons, active states */
-  --primary-foreground: #f8fafc; /* slate-50 - primary text */
-  --secondary: #334155; /* slate-700 - elevated elements */
-  --secondary-foreground: #f8fafc; /* slate-50 - secondary text */
-  --muted: #334155; /* slate-700 - muted backgrounds */
-  --muted-foreground: #94a3b8; /* slate-400 - muted text */
+  --primary-foreground: #ffffff; /* white - primary text */
+  --secondary: #f1f5f9; /* slate-100 - elevated elements */
+  --secondary-foreground: #0f172a; /* slate-900 - secondary text */
+  --muted: #f1f5f9; /* slate-100 - muted backgrounds */
+  --muted-foreground: #64748b; /* slate-500 - muted text */
   --accent: #3b82f6; /* blue-500 - links, info elements */
-  --accent-foreground: #f8fafc; /* slate-50 - accent text */
+  --accent-foreground: #ffffff; /* white - accent text */
   --destructive: #ef4444; /* red-500 - error states */
-  --destructive-foreground: #f8fafc; /* slate-50 - destructive text */
-  --border: #475569; /* slate-600 - subtle borders */
-  --input: #334155; /* slate-700 - input backgrounds */
+  --destructive-foreground: #ffffff; /* white - destructive text */
+  --border: #e2e8f0; /* slate-200 - subtle borders */
+  --input: #f8fafc; /* slate-50 - input backgrounds */
   --ring: #6366f1; /* indigo-500 - focus rings */
   --chart-1: #6366f1; /* indigo-500 */
   --chart-2: #3b82f6; /* blue-500 */
@@ -29,13 +27,13 @@
   --chart-4: #f59e0b; /* amber-500 */
   --chart-5: #ff6b6b; /* coral accent */
   --radius: 0.5rem;
-  --sidebar: #1e293b; /* slate-800 - sidebar background */
-  --sidebar-foreground: #f8fafc; /* slate-50 - sidebar text */
+  --sidebar: #f8fafc; /* slate-50 - sidebar background */
+  --sidebar-foreground: #0f172a; /* slate-900 - sidebar text */
   --sidebar-primary: #6366f1; /* indigo-500 - sidebar active */
-  --sidebar-primary-foreground: #f8fafc; /* slate-50 - sidebar active text */
-  --sidebar-accent: #334155; /* slate-700 - sidebar hover */
-  --sidebar-accent-foreground: #f8fafc; /* slate-50 - sidebar hover text */
-  --sidebar-border: #475569; /* slate-600 - sidebar borders */
+  --sidebar-primary-foreground: #ffffff; /* white - sidebar active text */
+  --sidebar-accent: #f1f5f9; /* slate-100 - sidebar hover */
+  --sidebar-accent-foreground: #0f172a; /* slate-900 - sidebar hover text */
+  --sidebar-border: #e2e8f0; /* slate-200 - sidebar borders */
   --sidebar-ring: #6366f1; /* indigo-500 - sidebar focus */
 
   --success: #10b981; /* emerald-500 - success states */

@@ -7,8 +7,8 @@ import { Suspense } from "react"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "CSM Educativo - Panel de Administración Global",
-  description: "Panel de control para administradores globales de CSM Educativo",
+  title: "CSM Educativo - Global Administration Panel",
+  description: "Control panel for CSM Educativo global administrators",
   generator: "v0.app",
 }
 
@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es" className="dark">
+    <html lang="en">
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
