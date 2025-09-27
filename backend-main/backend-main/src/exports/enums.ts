@@ -1,1 +1,0 @@
-export { MaterialType } from '../materials/enums/material-type.enum';
