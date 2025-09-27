@@ -38,8 +38,8 @@ export function GlobalDashboard() {
                 <School className="h-4 w-4 text-primary-foreground" />
               </div>
               <div>
-                <h1 className="text-lg font-semibold text-foreground">CSM Educativo</h1>
-                <p className="text-xs text-muted-foreground">Panel Global</p>
+                <h1 className="text-lg font-semibold text-foreground">CSM Educational</h1>
+                <p className="text-xs text-muted-foreground">Global Panel</p>
               </div>
             </div>
           </div>
@@ -47,7 +47,7 @@ export function GlobalDashboard() {
           <div className="flex items-center gap-4">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-              <Input placeholder="Buscar instituciones, usuarios..." className="w-80 pl-10" />
+              <Input placeholder="Search institutions, users..." className="w-80 pl-10" />
             </div>
             <Button variant="ghost" size="icon">
               <Bell className="h-4 w-4" />
@@ -68,7 +68,7 @@ export function GlobalDashboard() {
               onClick={() => setActiveTab("dashboard")}
             >
               <BarChart3 className="mr-2 h-4 w-4" />
-              Dashboard Global
+              Global Dashboard
             </Button>
             <Button
               variant={activeTab === "institutions" ? "secondary" : "ghost"}
@@ -76,7 +76,7 @@ export function GlobalDashboard() {
               onClick={() => setActiveTab("institutions")}
             >
               <School className="mr-2 h-4 w-4" />
-              Instituciones
+              Institutions
             </Button>
             <Button
               variant={activeTab === "users" ? "secondary" : "ghost"}
@@ -84,7 +84,7 @@ export function GlobalDashboard() {
               onClick={() => setActiveTab("users")}
             >
               <Users className="mr-2 h-4 w-4" />
-              Gestión de Usuarios
+              User Management
             </Button>
             <Button
               variant={activeTab === "evaluations" ? "secondary" : "ghost"}
@@ -92,7 +92,7 @@ export function GlobalDashboard() {
               onClick={() => setActiveTab("evaluations")}
             >
               <UserCheck className="mr-2 h-4 w-4" />
-              Autoevaluaciones
+              Self-Assessments
             </Button>
             <Button
               variant={activeTab === "content" ? "secondary" : "ghost"}
@@ -100,7 +100,7 @@ export function GlobalDashboard() {
               onClick={() => setActiveTab("content")}
             >
               <FileText className="mr-2 h-4 w-4" />
-              Contenidos Globales
+              Global Content
             </Button>
             <Button
               variant={activeTab === "reports" ? "secondary" : "ghost"}
@@ -108,7 +108,7 @@ export function GlobalDashboard() {
               onClick={() => setActiveTab("reports")}
             >
               <Activity className="mr-2 h-4 w-4" />
-              Reportes Avanzados
+              Advanced Reports
             </Button>
             <Button
               variant={activeTab === "messages" ? "secondary" : "ghost"}
@@ -116,7 +116,7 @@ export function GlobalDashboard() {
               onClick={() => setActiveTab("messages")}
             >
               <MessageSquare className="mr-2 h-4 w-4" />
-              Centro de Mensajes
+              Message Center
             </Button>
             <Button
               variant={activeTab === "events" ? "secondary" : "ghost"}
@@ -124,7 +124,7 @@ export function GlobalDashboard() {
               onClick={() => setActiveTab("events")}
             >
               <Calendar className="mr-2 h-4 w-4" />
-              Eventos Globales
+              Global Events
             </Button>
             <Button
               variant={activeTab === "security" ? "secondary" : "ghost"}
@@ -132,7 +132,7 @@ export function GlobalDashboard() {
               onClick={() => setActiveTab("security")}
             >
               <Shield className="mr-2 h-4 w-4" />
-              Seguridad y Accesos
+              Security & Access
             </Button>
             <Button
               variant={activeTab === "settings" ? "secondary" : "ghost"}
@@ -140,7 +140,7 @@ export function GlobalDashboard() {
               onClick={() => setActiveTab("settings")}
             >
               <Settings className="mr-2 h-4 w-4" />
-              Configuraciones
+              Settings
             </Button>
           </nav>
         </aside>
@@ -150,13 +150,13 @@ export function GlobalDashboard() {
             <div className="space-y-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <h2 className="text-2xl font-bold text-foreground">Dashboard Global</h2>
-                  <p className="text-muted-foreground">Visión estratégica de toda la plataforma CSM Educativo</p>
+                  <h2 className="text-2xl font-bold text-foreground">Global Dashboard</h2>
+                  <p className="text-muted-foreground">Strategic overview of the entire CSM Educational platform</p>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Badge variant="secondary">Tiempo real</Badge>
+                  <Badge variant="secondary">Real-time</Badge>
                   <Button variant="outline" size="sm">
-                    Exportar datos
+                    Export Data
                   </Button>
                 </div>
               </div>
@@ -170,15 +170,14 @@ export function GlobalDashboard() {
           {activeTab === "reports" && <ReportsSection />}
           {activeTab === "settings" && <GlobalSettings />}
 
-          {/* Placeholder para otras pestañas */}
           {!["dashboard", "users", "reports", "settings"].includes(activeTab) && (
             <div className="flex items-center justify-center h-96">
               <div className="text-center">
                 <div className="h-12 w-12 rounded-full bg-muted flex items-center justify-center mx-auto mb-4">
                   <Settings className="h-6 w-6 text-muted-foreground" />
                 </div>
-                <h3 className="text-lg font-medium text-foreground mb-2">Sección en desarrollo</h3>
-                <p className="text-muted-foreground">Esta funcionalidad estará disponible próximamente.</p>
+                <h3 className="text-lg font-medium text-foreground mb-2">Section in Development</h3>
+                <p className="text-muted-foreground">This functionality will be available soon.</p>
               </div>
             </div>
           )}
