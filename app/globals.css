@@ -2,46 +2,56 @@
 @import "tw-animate-css";
 
 :root {
-  --background: #ffffff; /* white - main background */
-  --foreground: #0f172a; /* slate-900 - main text */
-  --card: #f8fafc; /* slate-50 - card backgrounds */
-  --card-foreground: #0f172a; /* slate-900 - card text */
+  /* Updated color palette to match teacher interface specifications */
+  --background: #f8fafc; /* slate-50 - main background */
+  --foreground: #1e293b; /* slate-800 - main text */
+  --card: #ffffff; /* white - card backgrounds */
+  --card-foreground: #1e293b; /* slate-800 - card text */
   --popover: #ffffff; /* white - popover backgrounds */
-  --popover-foreground: #0f172a; /* slate-900 - popover text */
-  --primary: #6366f1; /* indigo-500 - buttons, active states */
+  --popover-foreground: #1e293b; /* slate-800 - popover text */
+  --primary: #6366f1; /* indigo-500 - primary buttons, active sidebar items */
   --primary-foreground: #ffffff; /* white - primary text */
   --secondary: #f1f5f9; /* slate-100 - elevated elements */
-  --secondary-foreground: #0f172a; /* slate-900 - secondary text */
+  --secondary-foreground: #1e293b; /* slate-800 - secondary text */
   --muted: #f1f5f9; /* slate-100 - muted backgrounds */
   --muted-foreground: #64748b; /* slate-500 - muted text */
-  --accent: #3b82f6; /* blue-500 - links, info elements */
+  --accent: #3b82f6; /* blue-500 - secondary elements */
   --accent-foreground: #ffffff; /* white - accent text */
   --destructive: #ef4444; /* red-500 - error states */
   --destructive-foreground: #ffffff; /* white - destructive text */
-  --border: #e2e8f0; /* slate-200 - subtle borders */
-  --input: #f8fafc; /* slate-50 - input backgrounds */
+  --border: #e2e8f0; /* slate-200 - borders and dividers */
+  --input: #ffffff; /* white - input backgrounds */
   --ring: #6366f1; /* indigo-500 - focus rings */
   --chart-1: #6366f1; /* indigo-500 */
   --chart-2: #3b82f6; /* blue-500 */
   --chart-3: #10b981; /* emerald-500 */
   --chart-4: #f59e0b; /* amber-500 */
-  --chart-5: #ff6b6b; /* coral accent */
+  --chart-5: #ff5757; /* coral accent */
   --radius: 0.5rem;
-  --sidebar: #f8fafc; /* slate-50 - sidebar background */
-  --sidebar-foreground: #0f172a; /* slate-900 - sidebar text */
-  --sidebar-primary: #6366f1; /* indigo-500 - sidebar active */
-  --sidebar-primary-foreground: #ffffff; /* white - sidebar active text */
-  --sidebar-accent: #f1f5f9; /* slate-100 - sidebar hover */
-  --sidebar-accent-foreground: #0f172a; /* slate-900 - sidebar hover text */
+
+  /* Updated sidebar colors to match specifications */
+  --sidebar: #ffffff; /* white - sidebar background */
+  --sidebar-foreground: #64748b; /* slate-500 - inactive items */
+  --sidebar-primary: #6366f1; /* indigo-500 - active item text */
+  --sidebar-primary-foreground: #6366f1; /* indigo-500 - active text */
+  --sidebar-accent: #f1f5f9; /* slate-100 - hover background */
+  --sidebar-accent-foreground: #1e293b; /* slate-800 - hover text */
   --sidebar-border: #e2e8f0; /* slate-200 - sidebar borders */
   --sidebar-ring: #6366f1; /* indigo-500 - sidebar focus */
+  --sidebar-active-bg: #e0e7ff; /* indigo-100 - active item background */
 
+  /* Added success and warning colors */
   --success: #10b981; /* emerald-500 - success states */
   --warning: #f59e0b; /* amber-500 - warning states */
+
+  /* Added geometric accent colors */
+  --coral-accent: #ff5757; /* coral accent for geometric shapes */
+  --cyan-accent: #22d3ee; /* cyan accent for geometric elements */
+  --purple-accent: #8b5cf6; /* purple accent for geometric shapes */
 }
 
 @theme inline {
-  --font-sans: var(--font-geist-sans);
+  --font-sans: Inter, -apple-system, sans-serif;
   --font-mono: var(--font-geist-mono);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -87,5 +97,21 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* Added geometric background pattern styles */
+  .geometric-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 40% 80%, rgba(255, 87, 87, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(34, 211, 238, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
   }
 }
